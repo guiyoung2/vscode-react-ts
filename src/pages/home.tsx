@@ -6,7 +6,6 @@ const Home = () => {
     return (
         <>
             <div>
-                <h2>제목입니다</h2>
                 <div>
                     <button onClick={()=>{
                         navigate("/project")
@@ -14,6 +13,7 @@ const Home = () => {
                     <button onClick={()=>{
                         navigate("/content")
                     }}>go content</button>
+                    <h2>제목입니다</h2>
                 </div>
             </div>
         </>

@@ -1,21 +1,21 @@
 import { useNavigate } from "react-router-dom"
 
 
-const Content = () => {
+const Practice = () => {
     const navigate = useNavigate()
     return (
         <>
             <div>
-                <h2>콘텐츠입니다</h2>
             <button onClick={()=>{
-                        navigate("/")
-                    }}>go home</button>
+                navigate("/")
+            }}>go home</button>
                     <button onClick={()=>{
                         navigate("/project")
                     }}>go project</button>
+                    <h2>연습입니다</h2>
             </div>
         </>
     )
 }
 
-export default Content
+export default Practice

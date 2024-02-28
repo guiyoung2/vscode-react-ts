@@ -1,23 +1,36 @@
 import { useNavigate } from "react-router-dom"
-import  { SideTapLayout, TapBt } from "styled-component/sideTap"
+import  { SideTapLayout, TapMenu } from "styled-component/sideTap"
 
 interface Taps {
+        name: string,
         Icon: string,
         path: string
 }
 
 const sideTaps: Taps[] = [
-    {
+    {   name: 'Home',
         Icon: '',
         path: '/'
     },
-    {
+    {   
+        name: 'About',
+        Icon: '',
+        path: '/about'
+    },
+    {   
+        name: 'Project',
         Icon: '',
         path: '/project'
     },
-    {
+    {   
+        name: 'Practice',
         Icon: '',
-        path: '/content'
+        path: '/practice'
+    },
+    {   
+        name: 'Contact',
+        Icon: '',
+        path: '/contact'
     }
 ]
 const SideTapMenu = (): JSX.Element => {
@@ -29,13 +42,14 @@ const SideTapMenu = (): JSX.Element => {
             <div className="sideTap">
                 <SideTapLayout>
                   {
-                     sideTaps.map(({Icon, path}) => {
+                     sideTaps.map(({name, path}) => {
                       return (
-                        <TapBt onClick={() => {
+                        <TapMenu onClick={() => {
                            navigate(path)
                          }} key={path}>
                           {/* <Icon /> */}
-                          </TapBt>
+                          <div>{name}</div>
+                          </TapMenu>
                         )
                    })
                     }
